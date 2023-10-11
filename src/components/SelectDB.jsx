@@ -1,13 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
-import { MOCK_DBS, FILTER_BY_DEFAULT_TEXT } from "../constants";
+import { MOCK_DBS, FILTER_BY_DEFAULT_TEXT } from '../constants';
 
-import Action from "../components/Action";
-import DBList from "../components/DBList";
-import Loading from '../components/Loading';
+import { Action, DBList, Loading } from '../components/';
 
 const SelectDB = () => {
   const [list, setList] = useState([]);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [filterBy, setFilterBy] = useState(FILTER_BY_DEFAULT_TEXT);
   const [isLoading, setIsLoading] = useState(true);
 
