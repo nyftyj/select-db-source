@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { MOCK_DBS, FILTER_BY_DEFAULT_TEXT } from '../constants';
 
-import { Action, DBList, Loading } from '../components/';
+import { Action, DBList, Loading } from '../components';
 
 const SelectDB = () => {
   const [list, setList] = useState([]);

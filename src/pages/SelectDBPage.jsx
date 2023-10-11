@@ -1,4 +1,4 @@
-import { Header, Banner, SelectDB } from '../components/';
+import { Header, Banner, SelectDB } from '../components';
 
 const SelectDBPage = () => {
   return (
