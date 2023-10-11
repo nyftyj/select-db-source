@@ -1,0 +1,172 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #242424;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: '0 16px';
+  display: flex;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+select,
+button {
+  cursor: pointer;
+}
+
+.select-db-page-body {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-db-page-header {
+  text-align: center;
+  margin: 36px 0;
+}
+
+.search-container {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  width: 16px;
+  padding: 0 8px;
+  left: 8px
+}
+
+.search-input {
+  font-size: medium;
+  border: 1px solid #E4E4E7;
+  border-radius: 4px;
+  min-width: 320px;
+  height: 40px;
+  text-indent: 36px;
+}
+
+.select-filter-container {
+  display: flex;
+  position: relative;
+}
+
+.select-filter {
+  height: 40px;
+  min-width: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #E4E4E7;
+  color: #09090B;
+  appearance: none;
+}
+
+.down-carot {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 18px;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: white;
+  gap: 16px;
+}
+
+.grid-item-container:hover {
+  .grid-item {
+    background-color: rgb(115, 255, 183);
+  }
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #E4E4E7;
+  border-radius: 8px;
+  text-align: center;
+  height: 176px;
+  width: 188px;
+
+
+  /* 
+    The animation below this comment is optional.
+    It may not be neccessary but it applies a fun UX.
+  */
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  position: relative;
+}
+
+@keyframes fadein {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+.search-label {
+  position: relative;
+}
+
+.loading {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #29ED89;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.not-found {
+  display: flex;
+  margin: 48px;
+  justify-content: center;
+  align-items: center;
+}
