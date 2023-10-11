@@ -8,12 +8,12 @@ const MakeRequestLink = () => {
     )
 }
 
-const Header = ({ title, description }) => {
+const Header = () => {
     return (
         <section className='select-db-page-header'>
-            <h2 style={{ marginBottom: 12 }}>{title}</h2>
+            <h2 style={{ marginBottom: 12 }}>Select your datasource</h2>
             <h4 style={{ margin: 0, fontWeight: 'normal' }}>
-                {description}
+                {"Don't see what you're looking for? "}
                 <MakeRequestLink />
             </h4>
         </section>
